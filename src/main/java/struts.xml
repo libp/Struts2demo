@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.ui.theme" value="simple"></constant>
+    <constant name="struts.ui.templateDir" value="template"></constant>
+    <constant name="struts.ui.templateSuffix" value="ftl"></constant>
+    
+    <constant name="struts.custom.i18n.resources" value="com.primeton.resource.messageCommon"></constant>
+    
+	<package name="example"  extends="struts-default">
+		<action name="upload" class="com.peng.action.UploadAction" method="upload">
+		    <result name="success">/success.jsp</result>
+		    <result name="error">/error.jsp</result>
+		</action>
+	</package>
+	
+	
+</struts>
